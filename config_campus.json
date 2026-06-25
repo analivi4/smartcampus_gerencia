@@ -1,0 +1,47 @@
+{
+  "_comentario_mapeamento": "Vinculo manual entre URN do atuador no Orion e sala/tipo. O Orion real nao tem refRoom nem diferenciacao de tipo (todos sao type=Atuador com ligar/desligar apenas), por isso esse vinculo precisa ser mantido aqui.",
+
+  "_comentario_migracao_22_06_2026": "Em 22/06/2026 a administracao migrou os atuadores do fiware-service openiot/servicepath '/' para smartufc/servicepath '/campusquixada'. O atuador 94bb5f8710104d1e pareceu 'desaparecer' (404) durante a transicao porque os headers antigos nao encontravam mais a entidade no namespace novo. Confirmado funcionando normalmente apos atualizar os headers no script.",
+
+  "mapeamento_dispositivos": {
+    "urn:ngsi-ld:Atuador:94bb5f8710104d1e": {
+      "room": "bl1_sl1",
+      "tipo": "air_conditioner"
+    },
+    "urn:ngsi-ld:Atuador:b7985868de99e91d": {
+      "room": "bl1_sl1",
+      "tipo": "light"
+    }
+  },
+
+  "_comentario_sensor_fora": "urn:ngsi-ld:Atuador:3b21811b20ccde6e e fisicamente o sensor de ocupacao (VL53L0X), mas fica fora do mapeamento por enquanto pois ainda nao publica leitura utilizavel no Orion.",
+
+  "_comentario_grade": "Grade horaria por dia da semana em horario ABSOLUTO (HH:MM, 24h). O script calcula automaticamente o tempo relativo (unidades PDDL) a partir da hora REAL em que ele estiver rodando, nao de um horario fixo. Cada aula tem start, end e people. REGRA: a duracao da aula (end-start) deve ser >= 2.0 horas (turn_on dura 2.0 unidades = 2 horas, com over-all people>0 durante toda a duracao).",
+
+  "grade_semanal": {
+    "monday": {},
+    "tuesday": {
+      "bl1_sl1": [
+        {"start": "10:00", "end": "12:15", "people": 30},
+        {"start": "13:30", "end": "15:30", "people": 30},
+        {"start": "18:30", "end": "21:30", "people": 30}
+      ]
+    },
+    "wednesday": {
+      "bl1_sl1": [
+        {"start": "19:00", "end": "21:00", "people": 30},
+        {"start": "21:30", "end": "23:00", "people": 30}
+      ]
+    },
+    "thursday": {
+      "bl1_sl1": [
+        {"start": "10:00", "end": "12:00", "people": 30},
+        {"start": "13:30", "end": "15:30", "people": 30}
+      ]
+    },
+    "friday": {},
+    "saturday": {},
+    "sunday": {}
+  
+  }
+}

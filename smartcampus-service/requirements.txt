@@ -1,0 +1,7 @@
+fastapi
+pytest
+pytest-asyncio
+uvicorn
+apscheduler
+pydantic
+httpx

@@ -1,0 +1,96 @@
+{
+  "name": "turn-on-ac-bl1-sl1",
+  "domain": "smart_campus",
+  "objects": {
+    "rooms": ["bl1_sl1", "bl1_sl2"],
+    "air_conditioners": [
+      "bl1_sl1_ac1",
+      "bl1_sl1_ac2",
+      "bl1_sl2_ac1",
+      "bl1_sl2_ac2"
+    ],
+    "lights": [
+      "bl1_sl1_l1",
+      "bl1_sl1_l2",
+      "bl1_sl1_l3",
+      "bl1_sl1_l4",
+      "bl1_sl2_l1",
+      "bl1_sl2_l2",
+      "bl1_sl2_l3",
+      "bl1_sl2_l4"
+    ]
+  },
+  "init": {
+    "fluents": {
+      "people_in_room": {
+        "bl1_sl1": 0,
+        "bl1_sl2": 0
+      },
+      "ac_temperature": {
+        "bl1_sl1_ac1": 0,
+        "bl1_sl1_ac2": 0,
+        "bl1_sl2_ac1": 0,
+        "bl1_sl2_ac2": 0
+      },
+      "metric_total_cost": 0
+    },
+    "timed_events": [
+      {
+        "time": 0.0,
+        "type": "predicate",
+        "predicate": "operating_hour"
+      },
+      {
+        "time": 1.0,
+        "type": "fluent",
+        "fluent": "people_in_room",
+        "args": ["bl1_sl1"],
+        "value": 8
+      },
+      {
+        "time": 10.0,
+        "type": "predicate",
+        "predicate": "peak_hours"
+      },
+      {
+        "time": 10.0,
+        "type": "fluent",
+        "fluent": "people_in_room",
+        "args": ["bl1_sl2"],
+        "value": 10
+      },
+      {
+        "time": 15.0,
+        "type": "fluent",
+        "fluent": "people_in_room",
+        "args": ["bl1_sl1"],
+        "value": 0
+      },
+      {
+        "time": 15.0,
+        "type": "fluent",
+        "fluent": "people_in_room",
+        "args": ["bl1_sl2"],
+        "value": 0
+      }
+    ]
+  },
+  "goal": {
+    "predicates": [
+      { "predicate": "ac_off", "args": ["bl1_sl1", "bl1_sl1_ac1"] },
+      { "predicate": "ac_off", "args": ["bl1_sl1", "bl1_sl1_ac2"] },
+      { "predicate": "ac_off", "args": ["bl1_sl2", "bl1_sl2_ac1"] },
+      { "predicate": "ac_off", "args": ["bl1_sl2", "bl1_sl2_ac2"] },
+      { "predicate": "light_off", "args": ["bl1_sl1", "bl1_sl1_l1"] },
+      { "predicate": "light_off", "args": ["bl1_sl1", "bl1_sl1_l2"] },
+      { "predicate": "light_off", "args": ["bl1_sl1", "bl1_sl1_l3"] },
+      { "predicate": "light_off", "args": ["bl1_sl1", "bl1_sl1_l4"] },
+      { "predicate": "light_off", "args": ["bl1_sl2", "bl1_sl2_l1"] },
+      { "predicate": "light_off", "args": ["bl1_sl2", "bl1_sl2_l2"] },
+      { "predicate": "light_off", "args": ["bl1_sl2", "bl1_sl2_l3"] },
+      { "predicate": "light_off", "args": ["bl1_sl2", "bl1_sl2_l4"] },
+      { "predicate": "out_work_time" }
+    ]
+  },
+  "metric": "minimize (metric_total_cost)"
+}

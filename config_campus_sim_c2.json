@@ -1,0 +1,22 @@
+{
+  "_cenario": "C2 - Back-to-back manhã (simulação 2x15 min)",
+  "_instrucao": "Rodar o script 5 min antes do início. Aulas consecutivas sem intervalo.",
+
+  "mapeamento_dispositivos": {
+    "urn:ngsi-ld:Atuador:94bb5f8710104d1e": { "room": "bl1_sl1", "tipo": "air_conditioner" },
+    "urn:ngsi-ld:Atuador:b7985868de99e91d": { "room": "bl1_sl1", "tipo": "light" }
+  },
+
+  "grade_semanal": {
+    "monday":    {},
+    "tuesday":   {},
+    "wednesday": {      "bl1_sl1": [
+        { "start": "16:05", "end": "16:20", "people": 30 },
+        { "start": "16:20", "end": "16:35", "people": 30 }
+      ]},
+    "thursday": {},
+    "friday":    {},
+    "saturday":  {},
+    "sunday":    {}
+  }
+}

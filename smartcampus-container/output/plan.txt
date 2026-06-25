@@ -1,0 +1,37 @@
+Number of literals: 52
+Constructing lookup tables: [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%]
+Post filtering unreachable actions:  [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%]
+No semaphore facts found, returning
+[01;34mNo analytic limits found, not considering limit effects of goal-only operators[00m
+Not looking for earlier-is-better time-dependent rewards: no goal limits
+3% of the ground temporal actions in this problem are compression-safe
+Initial heuristic = 50.000
+b (49.000 | 15.001)b (48.000 | 15.001)b (47.000 | 15.001)b (46.000 | 15.001)b (45.000 | 15.001)b (44.000 | 15.001)b (43.000 | 15.001)b (42.000 | 15.001)b (41.000 | 15.001)b (40.000 | 15.001)b (39.000 | 15.001)b (38.000 | 15.001)b (37.000 | 15.001)b (36.000 | 15.001)b (35.000 | 15.001)b (34.000 | 15.001)b (33.000 | 15.001)b (32.000 | 15.001)b (31.000 | 15.001)b (30.000 | 15.001)b (29.000 | 15.001)b (28.000 | 15.001)b (27.000 | 15.001)b (26.000 | 15.001)b (25.000 | 15.001)b (24.000 | 15.001)b (23.000 | 16.001)b (22.000 | 16.001)b (21.000 | 16.001)b (20.000 | 16.001)b (19.000 | 16.001)b (18.000 | 16.001)b (17.000 | 16.001)b (16.000 | 16.001)b (15.000 | 16.001)b (14.000 | 16.001)b (13.000 | 16.001)b (12.000 | 16.001)b (11.000 | 16.001)b (10.000 | 16.001)b (9.000 | 16.001)b (8.000 | 16.001)b (7.000 | 16.001)b (6.000 | 16.001)b (5.000 | 16.001)b (4.000 | 16.001)b (3.000 | 16.001)b (2.000 | 16.001)b (1.000 | 16.001);;;; Solution Found
+; States evaluated: 60
+; Cost: 0.000
+; Time 0.09
+0.001: (start_campus_operating)  [15.000]
+1.001: (turn_on_light bl1_sl1 bl1_sl1_l4)  [2.000]
+1.001: (turn_on_light bl1_sl1 bl1_sl1_l3)  [2.000]
+1.001: (turn_on_light bl1_sl1 bl1_sl1_l2)  [2.000]
+1.001: (turn_on_light bl1_sl1 bl1_sl1_l1)  [2.000]
+1.001: (turn_on_air_conditioner bl1_sl1 bl1_sl1_ac2)  [2.000]
+1.001: (turn_on_air_conditioner bl1_sl1 bl1_sl1_ac1)  [2.000]
+10.001: (turn_on_light bl1_sl2 bl1_sl2_l4)  [2.000]
+10.001: (turn_on_light bl1_sl2 bl1_sl2_l3)  [2.000]
+10.001: (turn_on_light bl1_sl2 bl1_sl2_l2)  [2.000]
+10.001: (turn_on_light bl1_sl2 bl1_sl2_l1)  [2.000]
+10.001: (turn_on_air_conditioner bl1_sl2 bl1_sl2_ac2)  [2.000]
+10.001: (turn_on_air_conditioner bl1_sl2 bl1_sl2_ac1)  [2.000]
+15.001: (turn_off_light bl1_sl2 bl1_sl2_l4)  [1.000]
+15.001: (turn_off_light bl1_sl2 bl1_sl2_l3)  [1.000]
+15.001: (turn_off_light bl1_sl2 bl1_sl2_l2)  [1.000]
+15.001: (turn_off_light bl1_sl2 bl1_sl2_l1)  [1.000]
+15.001: (turn_off_light bl1_sl1 bl1_sl1_l4)  [1.000]
+15.001: (turn_off_light bl1_sl1 bl1_sl1_l3)  [1.000]
+15.001: (turn_off_light bl1_sl1 bl1_sl1_l2)  [1.000]
+15.001: (turn_off_light bl1_sl1 bl1_sl1_l1)  [1.000]
+15.001: (turn_off_air_conditioner bl1_sl2 bl1_sl2_ac2)  [1.000]
+15.001: (turn_off_air_conditioner bl1_sl2 bl1_sl2_ac1)  [1.000]
+15.001: (turn_off_air_conditioner bl1_sl1 bl1_sl1_ac2)  [1.000]
+15.001: (turn_off_air_conditioner bl1_sl1 bl1_sl1_ac1)  [1.000]

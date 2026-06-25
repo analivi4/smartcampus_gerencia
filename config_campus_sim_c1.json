@@ -1,0 +1,23 @@
+{
+  "_cenario": "C1 - Aula única manhã (simulação 15 min)",
+  "_instrucao": "Simulação de aula única no período da manhã, com 15 minutos de duração realizada em uma Quarta-feira. O script deve ligar o ar-condicionado e a luz da sala bl1_sl1 durante a aula, e desligar após o término.",
+
+  "mapeamento_dispositivos": {
+    "urn:ngsi-ld:Atuador:94bb5f8710104d1e": { "room": "bl1_sl1", "tipo": "air_conditioner" },
+    "urn:ngsi-ld:Atuador:b7985868de99e91d": { "room": "bl1_sl1", "tipo": "light" }
+  },
+
+  "grade_semanal": {
+    "monday":    {},
+    "tuesday":   {},
+    "wednesday": {
+      "bl1_sl1": [
+        { "start": "13:30", "end": "13:45", "people": 30 }
+      ]
+    },
+    "thursday":  {},
+    "friday":    {},
+    "saturday":  {},
+    "sunday":    {}
+  }
+}
