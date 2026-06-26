@@ -10,13 +10,12 @@
   "grade_semanal": {
     "monday":    {},
     "tuesday":   {},
-    "wednesday": {
-      "bl1_sl1": [
-        { "start": "18:10", "end": "18:25", "people": 30 },
-        { "start": "18:35", "end": "18:50", "people": 30 },
-        { "start": "19:10", "end": "19:25", "people": 30 }
+    "wednesday": {},
+    "thursday":  { "bl1_sl1": [
+        { "start": "19:30", "end": "19:45", "people": 30 },
+        { "start": "19:55", "end": "20:10", "people": 30 },
+        { "start": "20:20", "end": "20:35", "people": 30 }
       ]},
-    "thursday":  {},
     "friday": {},
     "saturday":  {},
     "sunday":    {}

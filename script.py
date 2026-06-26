@@ -17,7 +17,6 @@ ORION_URL = os.getenv("ORION_URL", "ocutado para o git")
 SERVICE_URL      = "http://localhost:8000"
 HORARIO_EXECUCAO = "07:00"   # horário do agendamento automático diário
 
-.
 FIWARE_SERVICE     = "smartufc"
 FIWARE_SERVICEPATH = "/campusquixada"
 

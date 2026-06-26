@@ -1,0 +1,23 @@
+{
+  "_cenario": "C4 - Três aulas (15min + intervalo 10min + 15min + 15min back-to-back)",
+  "_instrucao": "Rodar às 15:20. Aula 1: 15:30–15:45, intervalo de 10 min, Aula 2: 15:55–16:10 (back-to-back com Aula 3), Aula 3: 16:10–16:25.",
+
+  "mapeamento_dispositivos": {
+    "urn:ngsi-ld:Atuador:94bb5f8710104d1e": { "room": "bl1_sl1", "tipo": "air_conditioner" },
+    "urn:ngsi-ld:Atuador:b7985868de99e91d": { "room": "bl1_sl1", "tipo": "light" }
+  },
+
+  "grade_semanal": {
+    "monday":    {},
+    "tuesday":   {},
+    "wednesday": {},
+    "thursday":  {},
+    "friday": { "bl1_sl1": [
+        { "start": "15:30", "end": "15:45", "people": 30 },
+        { "start": "15:55", "end": "16:10", "people": 30 },
+        { "start": "16:10", "end": "16:25", "people": 30 }
+      ]},
+    "saturday":  {},
+    "sunday":    {}
+  }
+}
